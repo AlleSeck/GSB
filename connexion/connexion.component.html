@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<h1>Gestion des rapports de visite</h1>
+	<h2>Connexion</h2>
+    <h3>Bienvenue :{{username}}</h3>
+	<form action="process-login.php" method="POST" name="frmLogin">
+		<input type="text" [(ngModel)]="username" placeholder="Saisie de l'identifiant" id="username" name="username"/>
+		<br>
+		<br>
+		<input type="password" [(ngModel)]="password" placeholder="Saisir le mot de passe" id="password" name="password"/>
+		<br>
+		<br>
+		<form class="group" name="frmLogin" (ngSubmit)="valider()">
+			<button class="button" type="submit">Se connecter</button>
+		</form>
+	</form>
+</body>
+</html>
